@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# internal planning / AI-assistant instructions (kept local, not published)
+/AGENTS.md
+/CLAUDE.md
+/Portfolio wireframe design.pdf
+/portfolio-action-plan/
