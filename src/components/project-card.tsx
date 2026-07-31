@@ -1,8 +1,9 @@
+import Link from "next/link";
 import type { Project } from "@/data/projects";
 
 // Expandable case-study card (PORT-11). Uses native <details>/<summary> so
-// expand/collapse is keyboard-accessible with no client JS. The striped
-// thumbnail is a placeholder until real screenshots land in PORT-6.
+// expand/collapse is keyboard-accessible with no client JS. Projects with a
+// `detail` block also link out to a full /projects/[slug] case study.
 export function ProjectCard({ project }: { project: Project }) {
   return (
     <details className="group overflow-hidden rounded-xl border border-border-soft bg-surface transition-colors hover:border-border">
@@ -64,6 +65,26 @@ export function ProjectCard({ project }: { project: Project }) {
             </li>
           ))}
         </ul>
+        {project.detail ? (
+          <Link
+            href={`/projects/${project.slug}`}
+            className="group/link mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-accent transition-colors hover:text-fg"
+          >
+            View case study
+            <svg
+              aria-hidden
+              viewBox="0 0 20 20"
+              className="h-4 w-4 transition-transform duration-200 group-hover/link:translate-x-0.5"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.75"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M4 10h11M11 5l5 5-5 5" />
+            </svg>
+          </Link>
+        ) : null}
       </div>
     </details>
   );
