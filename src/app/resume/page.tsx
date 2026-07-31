@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHeader } from "@/components/page-header";
 import { jobs } from "@/data/experience";
 
@@ -50,13 +51,21 @@ export default function ResumePage() {
           title="Resume"
           intro="The full history, on one page — or download the PDF."
         />
-        <a
-          href={RESUME_PDF}
-          download
-          className="rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-accent-ink transition-[opacity,transform] hover:opacity-90 active:translate-y-px"
-        >
-          Download PDF
-        </a>
+        <div className="flex flex-wrap items-center gap-3">
+          <Link
+            href="/resume/view"
+            className="rounded-md border border-border px-5 py-2.5 text-sm font-semibold text-fg transition-colors hover:border-fg"
+          >
+            View PDF
+          </Link>
+          <a
+            href={RESUME_PDF}
+            download
+            className="rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-accent-ink transition-[opacity,transform] hover:opacity-90 active:translate-y-px"
+          >
+            Download PDF
+          </a>
+        </div>
       </div>
 
       <div className="mt-14 space-y-12">
