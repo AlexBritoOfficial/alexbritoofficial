@@ -1,47 +1,41 @@
 import Link from "next/link";
 
-// Home hero (PORT-1). Copy grounded in the real journey, positioned around
-// engineering, resilience, continuous growth, and web development for local businesses.
+// Home hero (PORT-1). Punchy and straight to the point: who I am, the three
+// disciplines I work across, and where to go next. The long-form story lives
+// on /about.
+const focusAreas = [
+  {
+    title: "Software Engineering",
+    desc: "Reliable, maintainable systems — data platforms, backends, and mobile apps built to last.",
+  },
+  {
+    title: "Design",
+    desc: "Clean, purposeful interfaces that make products clear, credible, and easy to use.",
+  },
+  {
+    title: "Web Development",
+    desc: "Fast, modern websites that help local businesses get found and turn searches into customers.",
+  },
+];
+
 export default function Home() {
   return (
     <section className="mx-auto max-w-5xl px-6 py-24 sm:py-32">
-      <div className="max-w-2xl">
+      <div className="max-w-3xl">
         <p className="mb-4 text-sm font-medium uppercase tracking-[0.15em] text-accent">
-          Software Engineer • Consistency Over Talent
+          Software Engineer · Designer · Web Developer
         </p>
 
         <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-fg sm:text-6xl">
           Alex Brito
         </h1>
 
-        <p className="mt-6 text-lg leading-relaxed text-muted-2">
-          I&apos;m a software engineer in Boston who believes great software is built the same way great careers
-          are—through consistency, discipline, and a commitment to continuous improvement.
+        <p className="mt-6 text-xl leading-relaxed text-muted-2 sm:text-2xl">
+          I design and build software that works — from data platforms and mobile apps to websites that bring local
+          businesses more customers.
         </p>
 
-        <p className="mt-4 text-lg leading-relaxed text-muted-2">
-          My journey has been shaped as much by perseverance as technology. From earning my computer science degree and
-          building production software to continuing to learn, build, and grow through setbacks, I&apos;ve learned that
-          progress comes from showing up every day. That mindset extends beyond engineering into marathon training,
-          weightlifting, Brazilian Jiu-Jitsu, long-term sobriety, and serving my recovery community.
-        </p>
-
-        <p className="mt-4 text-lg leading-relaxed text-muted-2">
-          I also design and build websites for contractors and trades businesses—turning local searches into booked
-          jobs. My goal is to give businesses a strong online presence that helps them get found, establish credibility,
-          generate leads, and ultimately drive more sales. The focus is on building a practical business tool that works
-          for the company, with visual customization and refinement coming as needed.
-        </p>
-
-        <p className="mt-4 text-lg leading-relaxed text-muted-2">
-          Whether I&apos;m designing data platforms, developing Android applications, or building websites for local
-          businesses, I strive to create solutions that are reliable, maintainable, and built to last. Away from the
-          keyboard, you&apos;ll usually find me reading, tackling technical challenges, training, traveling with my
-          wife, or giving back to my recovery community. I&apos;m driven by curiosity, resilience, and the belief that
-          the best engineers are lifelong students—of both technology and life.
-        </p>
-
-        <div className="mt-10 flex flex-wrap gap-3">
+        <div className="mt-10 flex flex-wrap items-center gap-x-5 gap-y-3">
           <Link
             href="/projects"
             className="rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-accent-ink transition-[opacity,transform] hover:opacity-90 active:translate-y-px">
@@ -49,11 +43,28 @@ export default function Home() {
           </Link>
 
           <Link
-            href="/resume"
+            href="/services"
             className="rounded-md border border-border px-5 py-2.5 text-sm font-semibold text-fg transition-[background-color,transform] hover:bg-surface active:translate-y-px">
-            Read resume
+            Web design services
+          </Link>
+
+          <Link
+            href="/about"
+            className="text-sm font-semibold text-accent transition-opacity hover:opacity-80">
+            About me →
           </Link>
         </div>
+      </div>
+
+      <div className="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-3">
+        {focusAreas.map((area) => (
+          <div
+            key={area.title}
+            className="rounded-xl border border-border-soft bg-surface p-6">
+            <h2 className="font-display text-base font-bold text-fg">{area.title}</h2>
+            <p className="mt-2 text-sm leading-relaxed text-muted-2">{area.desc}</p>
+          </div>
+        ))}
       </div>
     </section>
   );

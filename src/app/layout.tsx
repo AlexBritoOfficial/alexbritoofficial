@@ -27,11 +27,11 @@ export const metadata: Metadata = {
     template: `%s · ${siteName}`,
   },
   description:
-    "Alex Brito is a software engineer in Boston working across data platforms and mobile — selected work, experience, and resume.",
+    "Alex Brito is a software engineer, designer, and web developer in Boston — building data platforms, mobile apps, and websites that help local businesses grow.",
   openGraph: {
     title: `${siteName} — Portfolio`,
     description:
-      "Alex Brito is a software engineer in Boston working across data platforms and mobile — selected work, experience, and resume.",
+      "Alex Brito is a software engineer, designer, and web developer in Boston — building data platforms, mobile apps, and websites that help local businesses grow.",
     type: "website",
     siteName,
   },

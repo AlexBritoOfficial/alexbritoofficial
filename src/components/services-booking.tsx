@@ -27,7 +27,7 @@ export function ServicesBooking() {
     const data = new FormData(e.currentTarget);
     const lines = [
       `Business name: ${data.get("business") ?? ""}`,
-      `Trade / service: ${data.get("trade") ?? ""}`,
+      `Business type: ${data.get("trade") ?? ""}`,
       `Name: ${data.get("name") ?? ""}`,
       `Phone: ${data.get("phone") ?? ""}`,
       `Email: ${data.get("email") ?? ""}`,
@@ -87,19 +87,19 @@ export function ServicesBooking() {
                 id={`${formId}-business`}
                 name="business"
                 type="text"
-                placeholder="e.g. Rivera Plumbing"
+                placeholder="e.g. Rivera Plumbing or Bloom Café"
                 className={inputClass}
               />
             </div>
             <div>
               <label className={labelClass} htmlFor={`${formId}-trade`}>
-                Trade / service
+                Business type / service
               </label>
               <input
                 id={`${formId}-trade`}
                 name="trade"
                 type="text"
-                placeholder="e.g. Electrician, Roofer"
+                placeholder="e.g. Electrician, Bakery, Salon"
                 className={inputClass}
               />
             </div>
