@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 // TODO: swap these for real contact details before launch.
 const contact = {
   name: "Alex Brito",
-  email: "you@yourdomain.com",
-  phone: "(555) 000-0000",
-  site: "yourdomain.com",
+  email: "ajbrito93@gmail.com",
+  phone: "857-260-9759",
+  site: "www.alexbritoofficial.com",
 };
 
 export default function ServicesPage() {
@@ -102,8 +102,8 @@ export default function ServicesPage() {
               </div>
               <h4 className="font-display text-lg font-bold text-fg">Founding rate — get online for less</h4>
               <p className="mt-1 max-w-[52ch] text-[13px] text-muted">
-                For my first few small-business clients: a reduced one-time setup, then the standard $99/mo. Same site, same
-                support — just an easier start.
+                For my first few small-business clients: a reduced one-time setup, then the standard $99/mo. Same site,
+                same support — just an easier start.
               </p>
             </div>
             <div className="shrink-0 text-left sm:text-right">
