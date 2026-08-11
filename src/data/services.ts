@@ -16,12 +16,7 @@ export type PricingTier = {
   who: string;
 };
 
-export const trustItems: string[] = [
-  "Ranks on Google",
-  "One-tap call",
-  "Reviews up front",
-  "Quote requests 24/7",
-];
+export const trustItems: string[] = ["Ranks on Google", "One-tap call", "Reviews up front", "Quote requests 24/7"];
 
 export const serviceSteps: ServiceStep[] = [
   {
@@ -45,7 +40,7 @@ export const pricingTiers: PricingTier[] = [
   {
     name: "STARTER",
     price: "$99",
-    setup: "+ $699 one-time setup",
+    setup: "+ $399 one-time setup",
     featured: false,
     features: [
       "Up to 5 pages, mobile-ready",
@@ -59,7 +54,7 @@ export const pricingTiers: PricingTier[] = [
   {
     name: "GROWTH",
     price: "$179",
-    setup: "+ $699 one-time setup",
+    setup: "+ $399 one-time setup",
     featured: false,
     features: [
       "Everything in Starter, up to 10 pages",
@@ -73,7 +68,7 @@ export const pricingTiers: PricingTier[] = [
   {
     name: "LEAD-GEN PRO",
     price: "$299",
-    setup: "+ $699 one-time setup",
+    setup: "+ $399 one-time setup",
     featured: true,
     features: [
       "Everything in Growth, unlimited pages",
@@ -87,4 +82,4 @@ export const pricingTiers: PricingTier[] = [
 ];
 
 export const pricingFootnote =
-  "Plans are billed monthly on a 12-month term, then continue month-to-month — cancel anytime after year one. A one-time $699 setup fee applies to every plan; founding rate reduces it to $399 for the first 5 clients. Prices in USD.";
+  "Plans are billed monthly on a 12-month term, then continue month-to-month — cancel anytime after year one. A one-time $399 setup fee applies to every plan; founding rate reduces it to $399 for the first 5 clients. Prices in USD.";
